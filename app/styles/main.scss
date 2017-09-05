@@ -1,6 +1,8 @@
 // bower:scss
 // endbower
 $main: #e86767;
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans');
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
     border: 0;
     font-family: inherit;
@@ -236,7 +238,7 @@ p {
 body {
   padding: 0;
   background-color: #efefef;
-  font-family: 'Open Sans'
+  font-family: 'Open Sans';
 }
 
 
@@ -277,10 +279,10 @@ body {
     line-height: 1.2;
     font-weight: 600;
     text-align: center;
-} 
+}
 
 .header-image{
-  background-image: url('../images/header-bg.jpeg');
+  background-image: url('../images/header-bg.png');
   position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
@@ -297,30 +299,30 @@ body {
 }
 #head-main{
   z-index:9999;
-opacity: 0;
-position: relative;
-visibility: hidden;
-background-color: #fff;
-padding-top: 10px;
-padding-bottom: 10px;
--webkit-transform: translate(0, -100px);
--moz-transform: translate(0, -100px);
-transform: translate(0, -100px);
--webkit-backface-visibility: hidden;
--moz-backface-visibility: hidden;
-backface-visibility: hidden;
--webkit-transition: -webkit-transform 400ms ease-out 100ms, padding 300ms ease-out, box-shadow 300ms ease-out, background 300ms ease-out;
--moz-transition:       -moz-transform 400ms ease-out 100ms, padding 300ms ease-out, box-shadow 300ms ease-out, background 300ms ease-out;
-transition:                 transform 400ms ease-out 100ms, padding 300ms ease-out, box-shadow 300ms ease-out, background 300ms ease-out;
-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  opacity: 0;
+  position: relative;
+  visibility: hidden;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-transform: translate(0, -100px);
+  -moz-transform: translate(0, -100px);
+  transform: translate(0, -100px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 400ms ease-out 100ms, padding 300ms ease-out, box-shadow 300ms ease-out, background 300ms ease-out;
+  -moz-transition:       -moz-transform 400ms ease-out 100ms, padding 300ms ease-out, box-shadow 300ms ease-out, background 300ms ease-out;
+  transition:                 transform 400ms ease-out 100ms, padding 300ms ease-out, box-shadow 300ms ease-out, background 300ms ease-out;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
 #head-main.animated{
   opacity: 1;
-visibility: visible;
--webkit-transform: translate(0, 0);
--moz-transform: translate(0, 0);
-transform: translate(0, 0);
+  visibility: visible;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 #head-main.head-sticky{
@@ -638,7 +640,7 @@ transform: translate(0, 0);
     }
 }
 .section-txt-btn {
-    color: #000;
+    color: #3d4451;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.8;

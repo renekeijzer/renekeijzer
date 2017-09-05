@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
+      <link rel="stylesheet" href="bower_components/76d-social-icons/assets/css/social-icons.css"/>
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
@@ -14,9 +15,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animation.css">
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
     <!-- endbuild -->
   </head>
   <body ng-app="renekeijzerApp" ng-cloak>
@@ -40,7 +39,7 @@
           <nav flex id='nav' >
             <ul layout='row' layout-align='end center'>
               <li layout='column' ><a class='draw-nav'href="#about">About</a></li>
-              <li layout='column' class='draw-nav'><a href="#Skills">Skills</a></li>
+              <li layout='column' class='draw-nav'><a href="#skills">Skills</a></li>
               <li layout='column' class='draw-nav'><a href="#Experience">Experience</a></li>
               <li layout='column' class='draw-nav'><a href="#Blog">Blog</a></li>
               <li layout='column' class='draw-nav'><a href="#Other">Other</a></li>
@@ -71,19 +70,12 @@
        ga('send', 'pageview');
     </script>
     <script>
-    $(window).scroll(function () {
-      if( $(window).scrollTop() > $('#head-main').offset().top && !($('#head-main').hasClass('head-sticky'))){
-        $('#head-main').addClass('head-sticky');
-        $('#head-main').removeClass('has-img');
-      } else if ($(window).scrollTop() == 0){
-        $('#head-main').removeClass('head-sticky');
-        $('#head-main').addClass('has-img');
-      }
-    });
+
     </script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/angularfire/dist/angularfire.js"></script>
