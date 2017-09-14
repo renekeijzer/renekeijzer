@@ -38,3 +38,35 @@ $text: #aeaeae;
   -moz-transform: translate(0, 100px);
   transform: translate(0, 100px);
 }
+
+.animate-left{
+  -webkit-animation: animate-left 1.5s; /* Safari 4+ */
+ -moz-animation:    animate-left 1.5s; /* Fx 5+ */
+ -o-animation:      animate-left 1.5s; /* Opera 12+ */
+ animation:         animate-left 1.5s;
+
+}
+
+  .n-animate-left{
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translate(100px, 0);
+    -moz-transform: translate(100px, 0);
+    transform: translate(100px, 0);
+  }
+
+  .animate-right{
+    -webkit-animation: animate-right 1.5s; /* Safari 4+ */
+   -moz-animation:    animate-right 1.5s; /* Fx 5+ */
+   -o-animation:      animate-right 1.5s; /* Opera 12+ */
+   animation:         animate-right 1.5s;
+
+  }
+
+    .n-animate-right{
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transform: translate(-100px, 0);
+      -moz-transform: translate(-100px, 0);
+      transform: translate(-100px, 0);
+    }

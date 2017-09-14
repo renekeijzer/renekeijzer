@@ -17,6 +17,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline;
 }
 
+html{
+  height: 100%;
+  width:100%;
+  background-color: #efefef;
+  display: inline-block;
+}
+
+body{
+  background-color: #efefef;
+  line-height: 1.5;
+  font-size:16px;
+  color:#3d4451;
+}
+
 .h1, h1,
 .h2, h2,
 .h3, h3,
@@ -336,7 +350,7 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
-    background-color: #efefef;
+    background-color: #fff;
 }
 .header-bar{
   width:100%;
@@ -389,6 +403,10 @@ body {
 .section-about{
   padding-top:40px;
   position: relative;
+}
+.timeline-box-inner{
+  background-color: #fff;
+box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 .section-box{
     background-color: #fff;
@@ -703,6 +721,11 @@ body {
 .progress-bar .bar-line {
     height: 5px;
     position: relative;
+    background-color: #efefef;
+}
+
+.timeline-box-inner p {
+  font-size: 10pt;
 }
 
 .progress-bar .bar-line:after {
@@ -752,6 +775,7 @@ body {
     left: 50%;
     top: 0;
     height: 100%;
+    background-color: #eed3d3;
 }
 
 .timeline .timeline-inner {
@@ -887,6 +911,7 @@ body {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+    background-color: $main;
 }
 
 .timeline-box-left .arrow,
