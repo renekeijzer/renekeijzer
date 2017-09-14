@@ -18,5 +18,6 @@ angular.module('renekeijzerApp', [
     'firebase',
     'firebase.ref',
     'firebase.auth',
-    'ngMaterial'
+    'ngMaterial',
+    'angular-inview'
   ]);

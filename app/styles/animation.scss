@@ -22,3 +22,19 @@ $text: #aeaeae;
 #nav ul li a:hover:after {
   width: 100%;
 }
+
+
+.animate-up {
+  -webkit-animation: animate-up 1.5s; /* Safari 4+ */
+ -moz-animation:    animate-up 1.5s; /* Fx 5+ */
+ -o-animation:      animate-up 1.5s; /* Opera 12+ */
+ animation:         animate-up 1.5s;
+}
+
+.n-animate-up{
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(0, 100px);
+  -moz-transform: translate(0, 100px);
+  transform: translate(0, 100px);
+}

@@ -2,6 +2,8 @@
 // endbower
 $main: #e86767;
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans');
+@import url('keyframes.css');
+@import url('animation.css');
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
     border: 0;
@@ -410,27 +412,6 @@ body {
     border-radius: 3px;
     background-color: #e86767;
 }
- .animate-up {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transform: translate(0, 100px);
-    -moz-transform: translate(0, 100px);
-    transform: translate(0, 100px);
-}
-
- .animate-up.animated {
-    opacity: 1;
-    visibility: visible;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    transform: translate(0, 0);
-    -webkit-transition: -webkit-transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
-    -moz-transition: -moz-transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
-    transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
-}
 
 .logo-holder span {
     font-size: 30px;
@@ -703,6 +684,22 @@ body {
     background-color: $main;
 }
 
+.bar-fill{
+  &:hover{
+    &:before {
+      content: attr(data-width);
+      font-size: 9pt;
+      height:20px;
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, .54);
+      color:white;
+      padding: 2px;
+      position: absolute;
+      right: 15px;
+      top: -27px;
+    }
+  }
+}
 .progress-bar .bar-line {
     height: 5px;
     position: relative;
@@ -735,5 +732,252 @@ body {
 
     .section-skills .section-box .row:last-child .col-sm-6:last-child .progress-bar {
         margin-bottom: 0;
+    }
+}
+
+
+
+/* timeline stuff*/
+
+.timeline {
+    position: relative;
+}
+
+.timeline .timeline-bar {
+    content: '';
+    width: 4px;
+    opacity: 0.2;
+    margin-left: -2px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+}
+
+.timeline .timeline-inner {
+    position: relative;
+}
+
+.timeline-box {
+    width: 50%;
+    color: #757575;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.timeline-box:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-box a {
+    opacity: 1;
+    color: inherit;
+    -webkit-transition: opacity 0.15s linear;
+    -moz-transition: opacity 0.15s linear;
+    transition: opacity 0.15s linear;
+}
+
+.timeline-box a:hover {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.timeline-box a.img:hover {
+	opacity: 1;
+}
+
+.timeline-box a,
+.timeline-box img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.timeline-box h3 a, .timeline-box h4 a {
+    color: inherit;
+}
+.timeline-head a img{
+  height: 50px;
+}
+
+.timeline-box h3 {
+    color: #414141;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.1;
+    text-align: center;
+    margin: 15px 0 0 0;
+}
+
+.timeline-box h4 {
+    color: #878787;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px 0 0 0;
+}
+
+.timeline-box .img {
+    margin-top: 20px;
+}
+
+.timeline-box .img + h4 {
+    margin-top: 10px;
+}
+
+.timeline-box .date {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+}
+
+.timeline-box .timeline-head {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.timeline-box-compact .date, .timeline-box-compact h3, .timeline-box-compact h4 {
+    text-align: left;
+}
+
+.timeline-box-compact .date span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    padding: 5px 8px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.timeline-box-compact .date span:before {
+    content: '';
+    width: 0;
+    height: 0;
+    top: 100%;
+    left: 5px;
+    display: block;
+    position: absolute;
+    border-style: solid;
+    border-width: 0 0 8px 8px;
+    border-color: transparent;
+}
+
+.timeline-box-inner {
+    padding: 20px 5%;
+    position: relative;
+    border-width: 5px 0 0 0;
+    border-style: solid;
+}
+
+.timeline-box-left .dot,
+.timeline-box-right .dot {
+    top: 80px;
+    width: 8px;
+    height: 8px;
+    display: block;
+    position: absolute;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.timeline-box-left .arrow,
+.timeline-box-right .arrow {
+    top: 60px;
+    width: 12px;
+    height: 41px;
+    display: block;
+    position: absolute;
+    background-image: url(img/arrows.png);
+    background-repeat: no-repeat;
+}
+
+.timeline-box-left .arrow:before,
+.timeline-box-right .arrow:before {
+    width: 0;
+    height: 0;
+    content: '';
+    display: block;
+}
+
+.timeline-box-left {
+    float: left;
+    clear: left;
+}
+
+.timeline-box-left .timeline-box-inner {
+    margin-right: 35px;
+}
+
+.timeline-box-left .timeline-box-inner .arrow {
+    right: -12px;
+    background-position: -18px 0;
+}
+
+.timeline-box-left .timeline-box-inner .arrow:before {
+    margin-right: 2px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 10px solid #fff;
+}
+
+.timeline-box-left .dot {
+    right: 0px;
+    margin-right: -4px;
+}
+
+.timeline-box-right {
+    float: right;
+    clear: right;
+}
+
+.timeline-box-right .timeline-box-inner {
+    margin-left: 35px;
+}
+
+.timeline-box-right .timeline-box-inner .arrow {
+    left: -12px;
+    background-position: 0 0;
+}
+
+.timeline-box-right .timeline-box-inner .arrow:before {
+    margin-left: 2px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 10px solid #fff;
+}
+
+.timeline-box-right .dot {
+    left: 0px;
+    margin-left: -4px;
+}
+
+@media (max-width: 600px) {
+    .timeline-box {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .timeline-box .timeline-box-inner {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .timeline-box .timeline-box-inner .arrow {
+        display: none;
+    }
+
+    .timeline-box .dot {
+        display: none;
     }
 }
